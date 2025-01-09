@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.pet-animation {
+    width: 150px;
+    height: 150px;
+    background-image: url('pet_animation.gif');
+    /* Path to your pet animation image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    animation: petMove 3s ease infinite alternate;
+    /* Animation for pet movement */
+}
+
+@keyframes petMove {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.welcome-text {
+    font-size: 28px;
+    color: #fff;
+    background-image: linear-gradient(to right, #ff9191, #ffcf54);
+    /* Colorful gradient background */
+    -webkit-background-clip: text;
+    /* Clip text to the background */
+    background-clip: text;
+    animation: rainbowText 5s linear infinite;
+    /* Animation for text color changing */
+}
+
+@keyframes rainbowText {
+    0% {
+        color: #ff9191;
+    }
+    50% {
+        color: #ffcf54;
+    }
+    100% {
+        color: #ff9191;
+    }
+}
+
+
+/* Rest of the CSS remains the same */
+
+.pet-animation {
+    width: 150px;
+    height: 150px;
+    background-image: url('pet_animation.gif');
+    /* Path to your pet animation image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    animation: petMove 3s ease infinite alternate;
+}
+
+@keyframes petMove {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.form-animation {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: floatIn 2s ease infinite alternate;
+    /* Floating animation */
+}
+
+@keyframes floatIn {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff9191, #ffcf54, #ff9191);
+    /* Initial gradient background */
+    background-size: 400% 400%;
+    animation: gradientChange 10s ease infinite;
+    /* Gradient animation */
+}
+
+@keyframes gradientChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}-->

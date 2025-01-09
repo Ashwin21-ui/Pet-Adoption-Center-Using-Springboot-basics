@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function submitForm() {
+            window.location.href = "/pets/adoptionprocesspage";
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff620793, hsl(0, 0%, 100%), #050505);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Align form to the right */
+            height: 50vh;
+            position: relative;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-image {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            animation: animatedBackground 20s ease infinite;
+        }
+
+        @keyframes animatedBackground {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-50%, -50%);
+            }
+            50% {
+                transform: translate(0, -100%);
+            }
+            75% {
+                transform: translate(50%, -50%);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .form-container {
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            max-width: 400px;
+            max-height: 120vh; /* Set maximum height */
+            width: 100%;
+            overflow-y: auto; /* Enable vertical scrolling */
+            text-align: center;
+            animation: fadeIn 1s ease;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container select,
+        .form-container textarea {
+            width: calc(100% - 22px); /* Adjusted width to accommodate padding and border */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-container button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .form-container label input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-container img.transparent-image {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            width: 50%;
+            opacity: 0.2; /* Adjust opacity as needed */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <div class="background-image"></div>
+    </div>
+    <br><br>
+    <div class="form-container">
+        <!--- <img style="height: 600px;" src="trans.png" alt="Transparent Image" class="transparent-image">-->
+        <h2>Pet Adoption Form</h2>
+        <form id="adoption-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Your Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <label for="address">Your Address:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip">
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country">
+
+            <label for="terms"><input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions</label>
+
+            <button type="submit" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

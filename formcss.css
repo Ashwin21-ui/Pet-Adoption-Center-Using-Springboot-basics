@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(formback.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+    .login-container {
+
+    background-color:#fafcfc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rosybrown;
+    }
+    
+    .login-input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    
+    }
+    .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color:white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration:none;
+    }
+    .tab1{
+    display: inline-block;
+    padding-left: 225px;
+    }
+    .tab2{
+    display: inline-block;
+    padding-left: 350px;
+    }
+   /* a{
+        color: hotpink;
+    }
